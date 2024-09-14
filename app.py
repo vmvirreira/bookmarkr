@@ -10,10 +10,10 @@ import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'  # Replace with your own secret key
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bookmarks.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bookmarks.db'
 #app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///bookmarkr/instance/bookmarks.db"
 print(os.getcwd())
-app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///' + os.path.join(os.getcwd(), 'bookmarkr/instance/bookmarks.db') 
+#app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///' + os.path.join(os.getcwd(), 'bookmarkr/instance/bookmarks.db') 
 UPLOAD_FOLDER = 'bookmarkr/static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
